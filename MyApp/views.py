@@ -35,7 +35,7 @@ def login(request):
             return redirect('/login')
         else:
             login(request, user)
-            return redirect('/index')
+            return redirect('/')
     else:       
         form=LoginForm()
     return render(request, "MyApp/login.html",{"form":form})
