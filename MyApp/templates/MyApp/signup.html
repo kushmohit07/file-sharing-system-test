@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+    Sign Up
+{% endblock  %}
+
+{% block css_file %}
+  <link rel="stylesheet" href="{% static "MyApp/signup.css" %}"/>
+{% endblock  %}
+
+{% block content %}
+  <h2>Sign Up</h2>
+  <form action="/signup" method="POST">
+    {% csrf_token %}
+
+    {% if messages %}
+      <div class="alert alert-primary" role="alert">
+        {% for message in messages %}
+          {{ message }}
+        {% endfor %}
+      </div>
+    {% endif %}
+    <div class="form-control" {% if form.errors %} error {% endif%}>
+        {{ form }}
+    </div>
+    <button type="submit">Sign Up</button>
+  </form>
+  <p>Already have an account? <a href="{% url 'login' %}">Log in</a></p>
+{% endblock %}

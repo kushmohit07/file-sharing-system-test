@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block page_title %}
+    Home Page
+{% endblock  %}
+{% block css_file %}
+<link rel="stylesheet" href="{% static "MyApp/index.css" %}"/>
+{% endblock  %}
+
+{% block content %}
+    <h1>Welcome to EZ File Management System</h1>
+    <button type="submit"><a href="/signup">SignUp</button>
+    <button type="submit"><a href="/login">SignIn</button>
+{% endblock  %}

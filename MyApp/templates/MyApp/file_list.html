@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block page_title %}
+    File List
+{% endblock  %}
+
+{% block css_file %}
+    <link rel="stylesheet" href="{% static "MyApp/index.css" %}"/>
+{% endblock  %}
+
+{% block content %}
+    <h1>File List</h1>
+    <ul>
+        {% for file in files %}
+            <li>{{ file.upload.name }}<button><a href="{{ file.upload.url }}" download>Download</a></button></li>
+        {% endfor %}
+    </ul>
+    
+{% endblock %}
