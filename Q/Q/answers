@@ -1,0 +1,11 @@
+Q2. How do you plan on deploying this to the production environment?
+Ans.  1. Choose Heroku a hosting provider.
+      2. Set up a production-ready server with a WSGI serverand a web server.
+      3. Configure a production database(MySQL or PostgreSQL) and set necessary environment variables.
+      4. Set SSL/TLS certificates for secure communication.
+      5. Use a process manager to keep your application running.
+      6. Automate deployment using tools like Ansible or Docker for consistency.
+      7. Implement continuous integration and continuous deployment (CI/CD) pipelines.
+      8. Regularly update dependencies and apply security patches.
+      9. Implement monitoring and logging for performance and error tracking.
+      10 Regularly back up your database and media files.
